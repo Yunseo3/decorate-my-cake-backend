@@ -25,4 +25,6 @@ public interface CandleRepository extends JpaRepository<Candle, Long> {
     //년도
     @Query("SELECT c FROM Candle c WHERE c.cake = :cake ORDER BY YEAR(c.candlecreatedAt) DESC, c.candlecreatedAt DESC")
     List<Candle> findByCakeOrderByYearAndCandlecreatedAtDesc(@Param("cake") Cake cake);
+    @Query("SELECT c FROM Candle c WHERE c.cake = :cake ORDER BY YEAR(c.candlecreatedAt) ASC, c.candlecreatedAt DESC")
+    List<Candle> findByCakeOrderByYearAndCandlecreatedAtAsc(@Param("cake") Cake cake);
 }

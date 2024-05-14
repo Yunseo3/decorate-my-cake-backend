@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/candle")
-public class CandleController {
+public class CandleController {//
 
     private final CandleService candleService;
 
